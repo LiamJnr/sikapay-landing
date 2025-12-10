@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 82px;
     padding-block-end: 148px;
+    /* background: var(--off-white); */
 }
 
 .hero-heading__wrapper{
@@ -43,7 +44,7 @@
     justify-content: center;
     block-size: 48px;
     inline-size: 148px;
-    background: var(--text-pri);
+    background: var(--accent-color);
     color: var(--off-white);
     font-weight: 500;
     border: none;
@@ -74,7 +75,8 @@
 }
 
 .hero-socialproof__statement{
-    font-size: 20px;
+    font-size: var(--clamp20);
     font-weight: 600;
     color: var(--text-pri);
+    text-align: center;
 }

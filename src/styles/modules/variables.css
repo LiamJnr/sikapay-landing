@@ -4,7 +4,8 @@
 
     /* text size styles */
     --hero-tClamp: clamp(1.875rem, 1.5536rem + 1.6071vw, 3rem);
-    --clamp18: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);;
+    --clamp18: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
+    --clamp20: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
 
 
     /* color styles */
@@ -12,4 +13,6 @@
     --text-sec: oklch(55.897% 0.00006 271.152);
     --text-sec2: oklch(86.995% 0.0001 271.152);
     --off-white: oklch(96.715% 0.00011 271.152);
+    --body-bg: oklch(94.309% 0.00011 271.152);
+    --accent-color: oklch(61.368% 0.20361 255.22);
 }
