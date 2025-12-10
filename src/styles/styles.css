@@ -38,4 +38,5 @@ button{
 
 .main-stack{
     position: relative;
+    block-size: 100%;
 }

@@ -3,8 +3,7 @@
     flex-direction: column;
     gap: 42px;
     position: absolute;
-    block-size: 100vh;
-    block-size: 100dvh;
+    block-size: 100%;
     inline-size: 320px;
     top: 0;
     left: 0;
