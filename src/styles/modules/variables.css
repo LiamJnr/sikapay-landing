@@ -2,6 +2,11 @@
     /* spacing styles */
     --pi-clamp36: clamp(0.75rem, 0.3214rem + 2.1429vw, 2.25rem);
 
+    /* text size styles */
+    --hero-tClamp: clamp(1.875rem, 1.5536rem + 1.6071vw, 3rem);
+    --clamp18: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);;
+
+
     /* color styles */
     --text-pri: oklch(23.503% 0.00003 271.152);
     --text-sec: oklch(55.897% 0.00006 271.152);

@@ -3,6 +3,7 @@
 @import './modules/variables.css';
 @import './modules/navbar.css';
 @import './modules/sideNav.css';
+@import './modules/heroSection.css';
 
 *{
     padding: 0;
@@ -34,6 +35,7 @@ a{
 
 button{
     cursor: pointer;
+    font: inherit;
 }
 
 .main-stack{
