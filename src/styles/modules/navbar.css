@@ -11,19 +11,40 @@
     display: flex;
     align-items: center;
     gap: 32px;
+    block-size: 100%;
 }
 
-.menu-btn__cntnr{
-    background: black;
+.navlinks li{
+    block-size: 100%;
+}
+
+.navlinks a{
+    color: var(--text-sec);
+    font-weight: 500;
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.25s ease-in-out;
+}
+
+.navlinks a:hover{
+    color: var(--text-pri);
+}
+
+.menu-toggler{
+    block-size: 42px;
+    inline-size: 42px;
+    border: none;
+    background: transparent;
 }
 
 #menu-btn{
-    block-size: 42px;
-    inline-size: 42px;
     display: none;
 }
 
-@media screen and (max-width: 320px){
+
+@media screen and (max-width: 771px){
     #menu-btn{
         display: block;
     }

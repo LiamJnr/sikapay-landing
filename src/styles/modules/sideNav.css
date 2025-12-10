@@ -1,11 +1,58 @@
 .side-navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
     position: absolute;
     block-size: 100vh;
     inline-size: 320px;
-    background: red;
+    top: 0;
+    left: 0;
+    background: var(--off-white);
     z-index: 10;
     transform: translateX(-100%);
     transition: transform 0.25s ease-in-out;
+}
+
+.close-btn__cntnr{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-block: 24px;
+    padding-inline-end: 32px;
+}
+
+.side-navlinks{
+    display: flex;
+    flex-direction: column;
+    /* background: blue; */
+}
+
+.side-navlinks a{
+    display: inline-flex;
+    inline-size: 100%;
+    padding-block: 12px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text-sec);
+    transition: color 0.25s ease-in-out;
+}
+
+.side-navlinks a:hover{
+    color: var(--text-pri);
+}
+
+.side-nav-brand__cntnr{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.side-nav-brand{
+    font-size: 13vw;
+    color: var(--text-sec2);
 }
 
 .side-nav__backdrop{
@@ -13,6 +60,8 @@
     position: absolute;
     block-size: 100%;
     inline-size: 100vw;
+    top: 0;
+    left: 0;
     background: rgba(37, 37, 37, 0.5);
     z-index: 9;
     pointer-events: none;

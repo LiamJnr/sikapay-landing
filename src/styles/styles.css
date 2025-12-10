@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
 @import './modules/variables.css';
 @import './modules/navbar.css';
 @import './modules/sideNav.css';
@@ -12,6 +14,7 @@
 }
 
 html{
+    font-family: 'Instrument Sans', sans-serif;
     font: 1rem;
     block-size: 100%;
 }
@@ -26,6 +29,7 @@ ul, li{
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 button{
