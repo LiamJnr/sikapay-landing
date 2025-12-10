@@ -1,0 +1,34 @@
+.navbar{
+    block-size: 58px;
+    background: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--pi-clamp36);
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu-btn__cntnr{
+    background: black;
+}
+
+#menu-btn{
+    block-size: 42px;
+    inline-size: 42px;
+    display: none;
+}
+
+@media screen and (max-width: 320px){
+    #menu-btn{
+        display: block;
+    }
+
+    .navlinks{
+        display: none;
+    }
+}

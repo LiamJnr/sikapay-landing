@@ -1,0 +1,4 @@
+:root{
+    /* spacing styles */
+    --pi-clamp36: clamp(0.75rem, 0.3214rem + 2.1429vw, 2.25rem);
+}
