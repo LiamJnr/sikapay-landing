@@ -22,6 +22,7 @@ html{
 
 body{
     min-block-size: 100vh;
+    background: var(--off-white);
 }
 
 ul, li{
