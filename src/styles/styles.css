@@ -21,7 +21,7 @@ html{
 }
 
 body{
-    min-block-size: 100vh;
+    block-size: 100%;
     background: var(--off-white);
 }
 
@@ -37,9 +37,4 @@ a{
 button{
     cursor: pointer;
     font: inherit;
-}
-
-.main-stack{
-    position: relative;
-    block-size: 100%;
 }

@@ -4,6 +4,10 @@
     align-items: center;
     justify-content: space-between;
     padding-inline: var(--pi-clamp36);
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: var(--off-white);
 }
 
 .navlinks{
