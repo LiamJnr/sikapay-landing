@@ -82,38 +82,46 @@
 }
 
 .logos-carousel{
-    position: relative;
     inline-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    block-size: var(--height);
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 20%,
+        black 80%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 20%,
+        black 80%,
+        transparent
+        );
+    position: relative;
 }
 
 .logo-cntnr{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: var(--logo-gap);
     flex-wrap: nowrap;
-    gap: 32px;
 }
 
 .social-proof__logo{
     font-size: var(--clamp28);
     font-weight: 700;
     color: var(--text-sec3);
-    transition: color 0.25s ease-in-out;
-    cursor: default;
     white-space: nowrap;
+    text-align: center;
+    cursor: default;
 }
 
 .social-proof__logo:hover{
     color: var(--text-pri);
-}
-
-.logo-carousel__overlay{
-    position: absolute;
-    block-size: 100%;
-    inline-size: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, var(--off-white), rgba(0, 0, 210, 0), var(--off-white));
 }

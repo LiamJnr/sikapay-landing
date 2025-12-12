@@ -1,12 +1,16 @@
 :root{
     /* spacing styles */
     --pi-clamp36: clamp(0.75rem, 0.3214rem + 2.1429vw, 2.25rem);
+    --logos-gap-clamp32: clamp(1rem, 0.7857rem + 1.0714vw, 2rem);
 
     /* text size styles */
     --hero-tClamp: clamp(1.875rem, 1.5536rem + 1.6071vw, 3rem);
     --clamp28: clamp(1.25rem, 1.1071rem + 0.7143vw, 1.75rem);
     --clamp20: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
     --clamp18: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
+
+    /* social-logo styles*/
+    --logo-gap: 44px;
 
 
     /* color styles */

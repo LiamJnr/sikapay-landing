@@ -1,6 +1,7 @@
 .side-navbar{
     position: fixed;
-    block-size: 100%;
+    block-size: 100vh;
+    block-size: 100dvh;
     inline-size: 320px;
     top: 0;
     left: 0;
@@ -58,7 +59,8 @@
 .side-nav__backdrop{
     display: none;
     position: fixed;
-    block-size: 100%;
+    block-size: 100vh;
+    block-size: 100dvh;
     inline-size: 100vw;
     top: 0;
     left: 0;
