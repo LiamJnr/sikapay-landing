@@ -15,3 +15,9 @@ function collapseNav(){
 
 menuBtn?.addEventListener('click', toggleSideNav);
 closeBtn?.addEventListener('click', collapseNav);
+
+sideNavBackdrop?.addEventListener('click', () =>{
+    if(sideNavBackdrop){
+        collapseNav();
+    }
+})
