@@ -38,3 +38,9 @@ button{
     cursor: pointer;
     font: inherit;
 }
+
+.process-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

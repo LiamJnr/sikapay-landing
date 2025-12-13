@@ -19,9 +19,11 @@
 .hero-heading__cntnr{
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     max-inline-size: 880px;
     gap: 14px;
+    /* background: red; */
 }
 
 .hero-heading{
@@ -29,12 +31,15 @@
     letter-spacing: -1.1px;
     font-size: var(--hero-tClamp);
     color: var(--text-pri);
+    font-size: var(--clamp56);
+    max-inline-size: var(--clampheaderbox);
 }
 
 .hero-subheading{
     font-size: var(--clamp18);
     color: var(--text-sec);
     font-weight: 500;
+    max-inline-size: 480px;
 }
 
 .hero-cta__btn{
@@ -56,15 +61,10 @@
     justify-content: center;
 }
 
-.hero-image__cntnr{
-    max-inline-size: 1122px;
-}
-
-.hero-image{
+.ttt{
     display: block;
-    inline-size: 100%;
-    block-size: auto;
-    aspect-ratio: 1122 / 568;
+    width: 100%;
+    height: auto;
 }
 
 .hero-socialproof__wrapper{
