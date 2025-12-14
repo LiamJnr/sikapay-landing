@@ -3,6 +3,7 @@
     --pi-clamp36: clamp(0.75rem, 0.3214rem + 2.1429vw, 2.25rem);
     --logos-gap-clamp32: clamp(1rem, 0.7857rem + 1.0714vw, 2rem);
     --feature-card-pi-clamp16: clamp(0.5rem, 0.3571rem + 0.7143vw, 1rem);
+    --fcard-size-clamp348: clamp(18.25rem, 17.25rem + 5vw, 21.75rem);
 
     /* text size styles */
     --hero-tClamp: clamp(1.875rem, 1.5536rem + 1.6071vw, 3rem);

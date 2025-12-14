@@ -12,7 +12,7 @@
 .feature-cards__cntnr{
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--fcard-size-clamp348), 1fr));
     gap: 16px;
 }
 
@@ -23,7 +23,6 @@
     padding: var(--feature-card-pi-clamp16);
     border: 1px solid gainsboro;
     border-radius: 1vw;
-    inline-size: 100%;
     /* cursor: default; */
 }
 
