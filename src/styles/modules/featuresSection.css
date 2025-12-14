@@ -1,0 +1,56 @@
+.features-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 148px;
+}
+
+.section-maxw__cntnr{
+    gap: 58px;
+}
+
+.feature-cards__cntnr{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.feature-card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: var(--feature-card-pi-clamp16);
+    border: 1px solid gainsboro;
+    border-radius: 1vw;
+    inline-size: 100%;
+    /* cursor: default; */
+}
+
+.feature-card__illustration{
+    inline-size: 100%;
+    block-size: 280px;
+    /* background: greenyellow; */
+}
+
+.feature-card__description{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fcard__desc-title{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.fcard__desc-brief{
+    color: var(--text-sec);
+    line-height: 1.3;
+}
+
+.section-cta__cntnr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

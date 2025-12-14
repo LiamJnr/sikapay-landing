@@ -4,15 +4,14 @@
 @import './modules/navbar.css';
 @import './modules/sideNav.css';
 @import './modules/heroSection.css';
+@import './modules/featuresSection.css';
 
 *{
     padding: 0;
     margin: 0; 
 }
 
-*, *::before, *::after{
-    box-sizing: border-box;
-}
+*, *::before, *::after{ box-sizing: border-box; }
 
 html{
     font-family: 'Instrument Sans', sans-serif;
@@ -25,9 +24,7 @@ body{
     background: var(--off-white);
 }
 
-ul, li{
-    list-style: none;
-}
+ul, li{ list-style: none; }
 
 a{
     text-decoration: none;
@@ -39,8 +36,46 @@ button{
     font: inherit;
 }
 
+h1, h2, h3, p{ cursor: default; }
+
+.pad-in{
+    padding-inline: var(--pi-clamp36);
+}
+
 .process-sec{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.section-maxw__cntnr{
+    max-inline-size: 1122px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-heading__cntnr{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+
+.section-header{
+    font-size: var(--clamp40);
+    letter-spacing: -1px;
+    line-height: 0.95;
+    color: var(--text-pri);
+}
+
+.section-sub-header{
+    color: var(--text-sec);
+    line-height: 1.3;
+}
+
+.end-of-section-cta{
+    display: inline-block;
+    font: inherit;
+    color: inherit;
+    text-align: center;
 }
