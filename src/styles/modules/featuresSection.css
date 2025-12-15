@@ -12,7 +12,7 @@
 .feature-cards__cntnr{
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(var(--fcard-size-clamp348), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--fcard-size-clamp380), 1fr));
     gap: 16px;
 }
 

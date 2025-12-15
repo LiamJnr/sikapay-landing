@@ -5,6 +5,7 @@
 @import './modules/sideNav.css';
 @import './modules/heroSection.css';
 @import './modules/featuresSection.css';
+@import './modules/setupSection.css';
 
 *{
     padding: 0;
@@ -49,6 +50,7 @@ h1, h2, h3, p{ cursor: default; }
 }
 
 .section-maxw__cntnr{
+    inline-size: 1122px;
     max-inline-size: 1122px;
     display: flex;
     flex-direction: column;
