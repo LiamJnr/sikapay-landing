@@ -5,6 +5,8 @@
     --feature-card-pi-clamp16: clamp(0.5rem, 0.3571rem + 0.7143vw, 1rem);
     --fcard-size-clamp380: clamp(18.25rem, 16.6786rem + 7.8571vw, 23.75rem);
     --scard-size-480: clamp(18.25rem, 14.8929rem + 16.7857vw, 30rem);
+    --bfor-card-size-540: clamp(18.25rem, 13.8214rem + 22.1429vw, 33.75rem);
+    --bfor-card-pi-clamp48: clamp(1rem, 0.4286rem + 2.8571vw, 3rem);; 
 
     /* text size styles */
     --hero-tClamp: clamp(1.875rem, 1.5536rem + 1.6071vw, 3rem);

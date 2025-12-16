@@ -8,6 +8,7 @@
     top: 0;
     left: 0;
     background: var(--off-white);
+    z-index: 8;
 }
 
 .nav-logo-cntnr{

@@ -6,6 +6,7 @@
 @import './modules/heroSection.css';
 @import './modules/featuresSection.css';
 @import './modules/setupSection.css';
+@import './modules/targetsSection.css';
 
 *{
     padding: 0;
