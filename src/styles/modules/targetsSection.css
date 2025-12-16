@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    /* background: red; */
     align-items: center;
 }
 
@@ -17,14 +16,14 @@
     display: flex;
     align-items: center;
     padding-block: 56px;
-    padding-inline: var(--bfor-card-pi-clamp48);
+    padding-inline: var(--bfor-card-pi-clamp56);
     border: 1px solid gainsboro;
     border-radius: 1vw;
-    overflow: hidden;
     inline-size: var(--bfor-card-size-540);
+    inline-size: 100%;
     transition: 
-        background 0.3s ease-in-out,
-        color 0.3s ease-in-out;
+        background 0.15s ease-in-out,
+        color 0.15s ease-in-out;
 }
 
 .built-for__card.is-active{
