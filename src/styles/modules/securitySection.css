@@ -1,4 +1,4 @@
-.scalability-section{
+.security-section{
     display: flex;
     justify-content: center;
     padding-block: 148px;
@@ -8,14 +8,14 @@
     gap: 58px;
 }
 
-.scalability-cards__cntnr{
+.security-cards__cntnr{
     display: grid;
     place-content: center;
     grid-template-columns: repeat(auto-fit, minmax(var(--fcard-size-clamp380), 1fr));
     gap: 16px;
 }
 
-.scalability-card{
+.security-card{
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -25,25 +25,25 @@
     /* cursor: default; */
 }
 
-.scalability-card__illustration{
+.security-card__illustration{
     inline-size: 100%;
-    /* block-size: 280px; */
+    block-size: 280px;
     overflow: hidden;
     /* background: greenyellow; */
 }
 
-.scalability-card__description{
+.security-card__description{
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.scale-card__desc-title{
+.security-card__desc-title{
     font-size: 18px;
     font-weight: 500;
 }
 
-.scale-card__desc-brief{
+.security-card__desc-brief{
     color: var(--text-sec);
     line-height: 1.3;
 }
@@ -52,18 +52,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.scalability-img{
-    display: block;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 16/9; */
-}
-
-.add-departments__illustration,
-.new-roles__illustration,
-.support-complexity__illustration,
-.maintain-perf__illustration{
-    aspect-ratio: 497/280;
 }

@@ -8,6 +8,7 @@
 @import './modules/setupSection.css';
 @import './modules/targetsSection.css';
 @import './modules/scalabilitySection.css';
+@import './modules/securitySection.css';
 
 *{
     padding: 0;
