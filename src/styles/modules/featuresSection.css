@@ -29,6 +29,7 @@
 .feature-card__illustration{
     inline-size: 100%;
     block-size: 280px;
+    overflow: hidden;
     /* background: greenyellow; */
 }
 

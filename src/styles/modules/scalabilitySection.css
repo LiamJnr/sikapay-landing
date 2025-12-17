@@ -1,0 +1,55 @@
+.scalability-section{
+    display: flex;
+    justify-content: center;
+    padding-block: 148px;
+}
+
+/* .hero-image__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.scalability-img{
+    display: block;
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 16/9; */
+}
+
+.add-departments__illustration{
+    aspect-ratio: 898/664;
+}
+
+.new-roles__illustration,
+.support-complexity__illustration{
+    aspect-ratio: 391/320;
+}
+
+.maintain-perf__illustration{
+    aspect-ratio: 582/372;
+}
+
+.i-one{
+    background: url(/assets/add-departments.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.i-two{
+    background: url(/assets/new-roles.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.i-three{
+    background: url(/assets/support-complexity.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.i-four{
+    background: url(/assets/maintain-performance.png);
+    background-size: cover;
+    background-position: center center;
+}

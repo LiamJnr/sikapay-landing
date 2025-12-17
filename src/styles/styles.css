@@ -7,6 +7,7 @@
 @import './modules/featuresSection.css';
 @import './modules/setupSection.css';
 @import './modules/targetsSection.css';
+@import './modules/scalabilitySection.css';
 
 *{
     padding: 0;
