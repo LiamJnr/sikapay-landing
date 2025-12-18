@@ -48,7 +48,8 @@
 
 .setup-card__visuals{
     background: var(--text-sec2);
-    inline-size: var(--scard-size-480); 
+    inline-size: var(--scard-size-220);
+    inline-size: 280px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -64,7 +65,7 @@
 }
 
 .setup-card__heading{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-pri);
 }

@@ -9,33 +9,92 @@
 }
 
 .security-cards__cntnr{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.bottom-cards{
     display: grid;
     place-content: center;
     grid-template-columns: repeat(auto-fit, minmax(var(--fcard-size-clamp380), 1fr));
-    gap: 16px;
+    gap: 8px;
 }
 
 .security-card{
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: var(--feature-card-pi-clamp16);
     border: 1px solid gainsboro;
     border-radius: 1vw;
     /* cursor: default; */
 }
 
+.top-cards .security-card{
+    flex-direction: row;
+    background: var(--text-pri);
+}
+
+/* .top-cards .security-img{
+    aspect-ratio: 760/342;
+} */
+
+
+.top-cards .security-card__description{
+    order: -1;
+    max-inline-size: 314px;
+    padding-inline: 22px;
+    /* background: red; */
+    justify-content: center;
+    text-align: left;
+}
+
+@media screen and (max-width: 940px){
+    .top-cards .security-card{
+        flex-direction: column;
+    }
+
+    .top-cards .security-card__description{
+        max-inline-size: 100%;
+    }
+}
+
+.top-cards .security-card__desc-title{
+    font-size: 96px;
+    font-size: 56px;
+    font-size: var(--clamp-96);
+    font-weight: 600;
+    color: #303030;
+}
+
+.top-cards .security-card__desc-brief{
+    font-size: 28px;
+    font-size: 22px;
+    font-size: var(--clamp26-22);
+    line-height: 1.1;
+    letter-spacing: 1.05px;
+}
+
 .security-card__illustration{
     inline-size: 100%;
-    block-size: 280px;
+    /* block-size: 280px; */
     overflow: hidden;
     /* background: greenyellow; */
+}
+
+.security-img{
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    /* aspect-ratio: 532/342; */
 }
 
 .security-card__description{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: var(--feature-card-pi-clamp16);
 }
 
 .security-card__desc-title{
@@ -46,6 +105,10 @@
 .security-card__desc-brief{
     color: var(--text-sec);
     line-height: 1.3;
+}
+
+.security-card__desc-brief span{
+    color: var(--off-white);
 }
 
 .section-cta__cntnr{
