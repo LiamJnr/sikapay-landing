@@ -28,6 +28,9 @@
     gap: 16px;
     border: 1px solid gainsboro;
     border-radius: 1vw;
+    background: var(--accent-color);
+    overflow: hidden;
+    color: var(--off-white);
     /* cursor: default; */
 }
 
@@ -38,13 +41,14 @@
 
 /* .top-cards .security-img{
     aspect-ratio: 760/342;
-} */
-
-
+    } */
+    
+    
 .top-cards .security-card__description{
     order: -1;
     max-inline-size: 314px;
-    padding-inline: 22px;
+    /* padding-inline: 22px; */
+    padding: 32px;
     /* background: red; */
     justify-content: center;
     text-align: left;
@@ -74,6 +78,7 @@
     font-size: var(--clamp26-22);
     line-height: 1.1;
     letter-spacing: 1.05px;
+    color: var(--text-sec);
 }
 
 .security-card__illustration{
@@ -94,17 +99,27 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: var(--feature-card-pi-clamp16);
+    /* padding: var(--feature-card-pi-clamp16); */
+    padding-inline-start: var(--feature-card-pi-clamp16);
+    padding-block: 32px;
+    /* background: red; */
 }
 
 .security-card__desc-title{
-    font-size: 18px;
-    font-weight: 500;
+    /* font-size: 40px; */
+    font-size: clamp(1.375rem, 1.0536rem + 1.6071vw, 2.5rem);
+    /* font-size: 18px; */
+    font-weight: 600;
+    color: #4ba8ff;
 }
 
 .security-card__desc-brief{
-    color: var(--text-sec);
+    color: #4ba8ff;
+    /* font-size: 24px; */
+    font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
     line-height: 1.3;
+    /* background: yellow; */
+    max-inline-size: 240px;
 }
 
 .security-card__desc-brief span{
