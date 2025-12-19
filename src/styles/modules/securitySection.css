@@ -28,7 +28,7 @@
     gap: 16px;
     border: 1px solid gainsboro;
     border-radius: 1vw;
-    background: var(--accent-color);
+    background: var(--text-pri);
     overflow: hidden;
     color: var(--off-white);
     /* cursor: default; */
@@ -39,17 +39,27 @@
     background: var(--text-pri);
 }
 
-/* .top-cards .security-img{
-    aspect-ratio: 760/342;
-    } */
+.top-cards .security-card__illustration{
+    -webkit-mask-image: linear-gradient(
+       to left,
+       rgba(30,30,30,1) 0%,
+       rgba(30,30,30,1) 60%,
+       rgba(30,30,30,0) 100%
+    );
     
-    
+    mask-image: linear-gradient(
+       to left,
+       rgba(30,30,30,1) 0%,
+       rgba(30,30,30,1) 60%,
+       rgba(30,30,30,0) 100%
+    );  
+}
+       
 .top-cards .security-card__description{
     order: -1;
     max-inline-size: 314px;
-    /* padding-inline: 22px; */
-    padding: 32px;
-    /* background: red; */
+    padding-block: 32px;
+    padding-inline: clamp(1.125rem, 0.7679rem + 1.7857vw, 2.375rem);
     justify-content: center;
     text-align: left;
 }
@@ -62,14 +72,32 @@
     .top-cards .security-card__description{
         max-inline-size: 100%;
     }
+
+    .top-cards .security-card__illustration{
+        -webkit-mask-image: linear-gradient(
+        to top,
+            rgba(30,30,30,1) 100%,
+            rgba(30,30,30,1) 100%,
+            rgba(30,30,30,0) 100%
+        );
+        
+        mask-image: linear-gradient(
+        to top,
+            rgba(30,30,30,1) 100%,
+            rgba(30,30,30,1) 100%,
+            rgba(30,30,30,0) 100%
+        );  
+    }
+
 }
 
 .top-cards .security-card__desc-title{
     font-size: 96px;
     font-size: 56px;
     font-size: var(--clamp-96);
-    font-weight: 600;
+    font-weight: 700;
     color: #303030;
+    color: var(--text-sec);
 }
 
 .top-cards .security-card__desc-brief{
@@ -100,7 +128,7 @@
     flex-direction: column;
     gap: 12px;
     /* padding: var(--feature-card-pi-clamp16); */
-    padding-inline-start: var(--feature-card-pi-clamp16);
+    padding-inline-start: clamp(1.125rem, 0.7679rem + 1.7857vw, 2.375rem);
     padding-block: 32px;
     /* background: red; */
 }
@@ -109,17 +137,17 @@
     /* font-size: 40px; */
     font-size: clamp(1.375rem, 1.0536rem + 1.6071vw, 2.5rem);
     /* font-size: 18px; */
-    font-weight: 600;
-    color: #4ba8ff;
+    font-weight: 700;
+    color: var(--text-sec);
 }
 
 .security-card__desc-brief{
-    color: #4ba8ff;
     /* font-size: 24px; */
     font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
     line-height: 1.3;
     /* background: yellow; */
     max-inline-size: 240px;
+    color: var(--text-sec);
 }
 
 .security-card__desc-brief span{
