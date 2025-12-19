@@ -22,14 +22,24 @@
     padding: var(--feature-card-pi-clamp16);
     border: 1px solid gainsboro;
     border-radius: 1vw;
-    /* cursor: default; */
+    background: var(--off-white);
+    background: #ffffff;
 }
 
 .scalability-card__illustration{
-    inline-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* inline-size: 100%; */
     /* block-size: 280px; */
     overflow: hidden;
     /* background: greenyellow; */
+    /* background: red; */
+}
+
+.scalability-card__illustration svg{
+    block-size: auto;
+    inline-size: 100%;
 }
 
 .scalability-card__description{
