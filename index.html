@@ -57,7 +57,7 @@
                 <picture>
                     <source media="(min-width: 1024px)" srcset="./assets/heroImage1.webp">
                     <source class="ttt" media="(max-width: 771px)" srcset="./assets/mobilehero2.webp">
-                    <img class="hero-image ttt" src="./assets/heroImage1.webp" alt="sikapay dashboard image">
+                    <img fetchpriority="high" class="hero-image ttt" src="./assets/heroImage1.webp" alt="sikapay dashboard image">
                 </picture>
             </div>
             <div class="hero-socialproof__wrapper">
@@ -172,44 +172,33 @@
                     <p class="section-sub-header">Payroll data is protected at every level — from access to audit.</p>
                 </div>
                 <div class="security-cards__cntnr">
-                    <!-- <div class="top-cards">
-                        <div class="security-card">
-                            <div class="security-card__illustration">
-                                <div class="security-card__description">
-                                    <p class="security-card__desc-title">RBAC</p>
-                                    <p class="security-card__desc-brief"><span>Role Based Access Control</span> assigned by default</p>
-                                </div>
-                                <img class="security-img" src="./assets/rba-control.png" alt="role based access control illustration">
-                            </div>
+                    <div class="security-briefing">
+                        <div class="briefing-wrapper">
+                            <p>Role Based Access Control assigned by default</p>
+                            <p>Designed to support compliance requirements as you scale</p>
+                            <p>Sensitive information stays private by design. Control access to payroll and employee data at every level.</p>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="bottom-cards">
                         <div class="security-card">
                             <div class="security-card__illustration">
-                                <img class="security-img" src="./assets/encrypted-data.webp" alt="encytpted employee data illustration">
+                                <img class="security-img" src="./assets/encrypted-data.webp" alt="encytpted employee data illustration" loading="lazy">
                             </div>
                             <div class="security-card__description">
-                                <p class="security-card__desc-title">ENCRYPTION</p>
-                                <p class="security-card__desc-brief"><span>Encrypted</span> employee and payroll data</p>
+                                <p class="security-card__desc-title">Encryption</p>
+                                <p class="security-card__desc-brief">Encrypted employee and payroll data</p>
                             </div>
                         </div>
                         <div class="security-card">
                             <div class="security-card__illustration">
-                                <img class="security-img" src="./assets/audit-trails.webp" alt="audit trails illustration">
+                                <img class="security-img" src="./assets/audit-trails.webp" alt="audit trails illustration" loading="lazy">
                             </div>
                             <div class="security-card__description">
-                                <p class="security-card__desc-title">DIGITAL FOOTPRINT</p>
-                                <p class="security-card__desc-brief"><span>Full audit trails</span> for every action</p>
+                                <p class="security-card__desc-title">Digital Footprint</p>
+                                <p class="security-card__desc-brief">Full audit trails for every action</p>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="security-card">
-                        <div class="security-card__illustration"></div>
-                        <div class="security-card__description">
-                            <p class="security-card__desc-title">Designed to support compliance requirements as you scale</p>
-                            <p class="security-card__desc-brief">Sensitive information stays private by design. Control access to payroll and employee data at every level.</p>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="section-cta__cntnr">
                     <a class="end-of-section-cta feature-sec__cta" href="">See how access works across your organization</a>

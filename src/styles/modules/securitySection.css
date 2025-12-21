@@ -11,7 +11,7 @@
 .security-cards__cntnr{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 32px;
 }
 
 
@@ -34,78 +34,40 @@
     /* cursor: default; */
 }
 
-.top-cards .security-card{
-    flex-direction: row;
-    background: var(--text-pri);
+.security-briefing{
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
-.top-cards .security-card__illustration{
-    -webkit-mask-image: linear-gradient(
-       to left,
-       rgba(30,30,30,1) 0%,
-       rgba(30,30,30,1) 60%,
-       rgba(30,30,30,0) 100%
-    );
-    
-    mask-image: linear-gradient(
-       to left,
-       rgba(30,30,30,1) 0%,
-       rgba(30,30,30,1) 60%,
-       rgba(30,30,30,0) 100%
-    );  
-}
-       
-.top-cards .security-card__description{
-    order: -1;
-    max-inline-size: 314px;
-    padding-block: 32px;
-    padding-inline: clamp(1.125rem, 0.7679rem + 1.7857vw, 2.375rem);
-    justify-content: center;
-    text-align: left;
+.briefing-wrapper{
+    /* background: yellow; */
+    max-inline-size: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
 }
 
-@media screen and (max-width: 940px){
-    .top-cards .security-card{
-        flex-direction: column;
-    }
-
-    .top-cards .security-card__description{
-        max-inline-size: 100%;
-    }
-
-    .top-cards .security-card__illustration{
-        -webkit-mask-image: linear-gradient(
-        to top,
-            rgba(30,30,30,1) 100%,
-            rgba(30,30,30,1) 100%,
-            rgba(30,30,30,0) 100%
-        );
-        
-        mask-image: linear-gradient(
-        to top,
-            rgba(30,30,30,1) 100%,
-            rgba(30,30,30,1) 100%,
-            rgba(30,30,30,0) 100%
-        );  
-    }
-
+.briefing-wrapper p {
+    overflow: hidden;
 }
 
-.top-cards .security-card__desc-title{
-    font-size: 96px;
-    font-size: 56px;
-    font-size: var(--clamp-96);
-    font-weight: 700;
-    color: #303030;
-    color: var(--text-sec);
+.briefing-word {
+    display: inline-block;
+    color: gainsboro;
+    transition: color 0.4s ease;
+    will-change: color;
 }
 
-.top-cards .security-card__desc-brief{
-    font-size: 28px;
+.briefing-word.is-active {
+    color: var(--text-pri);
+}
+
+.security-briefing p{
     font-size: 22px;
-    font-size: var(--clamp26-22);
-    line-height: 1.1;
-    letter-spacing: 1.05px;
+    font-weight: 500;
     color: var(--text-sec);
 }
 
@@ -135,23 +97,15 @@
 
 .security-card__desc-title{
     /* font-size: 40px; */
-    font-size: clamp(1.375rem, 1.0536rem + 1.6071vw, 2.5rem);
-    /* font-size: 18px; */
-    font-weight: 700;
-    color: var(--text-sec);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--off-white);
 }
 
 .security-card__desc-brief{
-    /* font-size: 24px; */
-    font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+    font-size: 18px;
     line-height: 1.3;
-    /* background: yellow; */
-    max-inline-size: 240px;
     color: var(--text-sec);
-}
-
-.security-card__desc-brief span{
-    color: var(--off-white);
 }
 
 .section-cta__cntnr{
