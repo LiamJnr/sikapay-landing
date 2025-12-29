@@ -2,16 +2,18 @@
     display: flex;
     justify-content: center;
     padding-block: 148px;
+    /* background: red; */
 }
 
 .section-maxw__cntnr{
-    gap: 58px;
+    gap: 72px;
+    /* background: gray; */
 }
 
 .security-cards__cntnr{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 72px;
 }
 
 
@@ -41,8 +43,17 @@
     justify-content: start;
 }
 
+.briefing__cntnr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    inline-size: 100%;
+}
+
 .briefing-wrapper{
     /* background: yellow; */
+    inline-size: 100%;
     max-inline-size: 720px;
     display: flex;
     flex-direction: column;

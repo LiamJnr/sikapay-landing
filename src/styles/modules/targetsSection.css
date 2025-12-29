@@ -5,11 +5,18 @@
     padding-block: 148px;
 }
 
+.built-for-cards__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .built-for-cards__cntnr{
     display: flex;
     flex-direction: column;
     gap: 32px;
     align-items: center;
+    max-inline-size: 620px;
 }
 
 .built-for__card{
