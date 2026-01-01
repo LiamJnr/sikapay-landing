@@ -9,6 +9,10 @@
     gap: 58px;
 }
 
+.section-header{
+    max-inline-size: 440px;
+}
+
 .feature-cards__cntnr{
     display: grid;
     place-content: center;
@@ -19,11 +23,37 @@
 .feature-card{
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    justify-content: center;
+    gap: 32px;
     padding: var(--feature-card-pi-clamp16);
-    border: 1px solid gainsboro;
-    border-radius: 1vw;
-    /* cursor: default; */
+    padding-inline: 44px;
+    border-radius: 12px;
+    block-size: 320px;
+    background: white;
+    position: relative;
+}
+
+.feature-card::after{
+    box-sizing: content-box;
+    position: absolute;
+    content: "";
+    block-size: 100%;
+    inline-size: 100%;
+    padding: 3px;
+    border-radius: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(95, 86, 129);
+    z-index: -1;
+
+}
+
+.fcard-icon__wrapper{
+    block-size: 44px;
+    inline-size: 44px;
+    background: gainsboro;
+    border-radius: 4px;
 }
 
 .feature-card__illustration{

@@ -46,18 +46,33 @@
     align-items: center;
     justify-content: center;
     block-size: 48px;
-    inline-size: 148px;
+    inline-size: 160px;
     background: var(--accent-color);
     color: var(--off-white);
     font-weight: 500;
     border: none;
     border-radius: 8px;
+    transition: transform 0.25s ease-in-out, background 0.25s ease-in-out;
+}
+
+.hero-cta__btn:hover{
+    transform: translateY(-2px);
+    background: blue;
+}
+
+.hero-image__cntnr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 100%;
 }
 
 .hero-image__wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
+    inline-size: 100%;
+    max-inline-size: 1120px;
 }
 
 .ttt{
