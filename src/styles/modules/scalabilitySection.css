@@ -8,6 +8,39 @@
     gap: 58px;
 }
 
+.scalability-brief__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scalability__brief{
+    inline-size: 100%;
+    max-inline-size: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+.scalability__brief p{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-sec);
+    line-height: 1.4;
+}
+
+.span-text {
+    display: inline-block;
+    color: gainsboro;
+    transition: color 0.4s ease;
+    will-change: color;
+}
+
+.span-text.is-active {
+    color: var(--text-pri);
+}
+
 .scalability-cards__cntnr{
     display: grid;
     place-content: center;

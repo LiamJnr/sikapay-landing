@@ -89,3 +89,47 @@ function handleScroll() {
 
 
 window.addEventListener('scroll', handleScroll);
+
+
+
+
+// Scalability Section
+const securityBrief = document.querySelector('.scalability-brief__wrapper');
+const briefText = document.querySelectorAll('.scalability__brief p');
+
+let briefWords = [];
+
+briefText.forEach(t => {
+    const text = t.textContent.trim().split(' ');
+
+    t.innerHTML = text
+        .map(spanText => `<span class="span-text">${spanText}&nbsp;</span>`)
+        .join('');
+})
+
+/* Collect all words in reading order */
+briefWords = Array.from(document.querySelectorAll('.span-text'));
+const totalSpanText = briefWords.length;
+console.log(briefWords)
+
+function handleScrollTwo() {
+    const rect = securityBrief.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    const exitOffset = viewportHeight * 0.15;
+
+    const start = viewportHeight;
+    const end = exitOffset;
+
+    const progress = (start - rect.top) / (start - end);
+    const clampedProgress = Math.min(Math.max(progress, 0), 1);
+
+    const wordsToHighlight = Math.floor(clampedProgress * totalSpanText);
+
+    briefWords.forEach((word, index) => {
+        word.classList.toggle('is-active', index < wordsToHighlight);
+    });
+}
+
+
+window.addEventListener('scroll', handleScrollTwo);

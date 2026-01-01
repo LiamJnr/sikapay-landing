@@ -54,7 +54,7 @@
 .briefing-wrapper{
     /* background: yellow; */
     inline-size: 100%;
-    max-inline-size: 720px;
+    max-inline-size: 520px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -115,7 +115,7 @@
 
 .security-card__desc-brief{
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.4;
     color: var(--text-sec);
 }
 
