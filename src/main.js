@@ -1,135 +1,19 @@
-const sideNav = document.getElementById('side-nav');
-const sideNavBackdrop = document.querySelector('.side-nav__backdrop');
-const menuBtn = document.getElementById('menu-btn');
-const closeBtn = document.getElementById('close-btn');
+import { cardColorSwap } from "./components/cardColorSwap.js";
+import { sidebarToggler } from "./components/sidebarToggler.js";
+import { scalabilityTextReveal, securityTextReveal } from "./components/textReveal.js";
 
-function toggleSideNav(){
-    sideNav?.style.setProperty('transform', 'translateX(0)');
-    sideNavBackdrop?.style.setProperty('display', 'block');
-}
+window.addEventListener('DOMContentLoaded', () => {
 
-function collapseNav(){
-    sideNav?.style.setProperty('transform', 'translateX(-320px)');
-    sideNavBackdrop?.style.setProperty('display', 'none');
-}
+    //sidebar toggler
+    sidebarToggler();
 
-menuBtn?.addEventListener('click', toggleSideNav);
-closeBtn?.addEventListener('click', collapseNav);
+    // Security Briefing Scroll Animation
+    securityTextReveal();
 
-sideNavBackdrop?.addEventListener('click', () =>{
-    if(sideNavBackdrop){
-        collapseNav();
-    }
+    // Scalability Section Text Reveal
+    scalabilityTextReveal();
+
+    // Built For Section Scroll Animation
+    cardColorSwap();
+
 })
-
-
-
-// Built For Section Scroll Animation
-
-const cards = document.querySelectorAll('.built-for__card');
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                cards.forEach(card =>
-                    card.classList.remove('is-active')
-                );
-                entry.target.classList.add('is-active');
-            }
-        });
-    },
-    {
-        root: null,
-        threshold: 0,
-        rootMargin: '-50% 0px -50% 0px'
-    }
-);
-
-cards.forEach(card => observer.observe(card));
-
-
-// Security Briefing Scroll Animation
-
-const briefingSection = document.querySelector('.security-briefing');
-const paragraphs = document.querySelectorAll('.briefing-wrapper p');
-
-let allWords = [];
-
-/* Split text into word spans */
-paragraphs.forEach(p => {
-    const words = p.textContent.trim().split(' ');
-    p.innerHTML = words
-        .map(word => `<span class="briefing-word">${word}&nbsp;</span>`)
-        .join('');
-});
-
-/* Collect all words in reading order */
-allWords = Array.from(document.querySelectorAll('.briefing-word'));
-const totalWords = allWords.length;
-
-function handleScroll() {
-    const rect = briefingSection.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-
-    const exitOffset = viewportHeight * 0.15;
-
-    const start = viewportHeight;
-    const end = exitOffset;
-
-    const progress = (start - rect.top) / (start - end);
-    const clampedProgress = Math.min(Math.max(progress, 0), 1);
-
-    const wordsToHighlight = Math.floor(clampedProgress * totalWords);
-
-    allWords.forEach((word, index) => {
-        word.classList.toggle('is-active', index < wordsToHighlight);
-    });
-}
-
-
-window.addEventListener('scroll', handleScroll);
-
-
-
-
-// Scalability Section
-const securityBrief = document.querySelector('.scalability-brief__wrapper');
-const briefText = document.querySelectorAll('.scalability__brief p');
-
-let briefWords = [];
-
-briefText.forEach(t => {
-    const text = t.textContent.trim().split(' ');
-
-    t.innerHTML = text
-        .map(spanText => `<span class="span-text">${spanText}&nbsp;</span>`)
-        .join('');
-})
-
-/* Collect all words in reading order */
-briefWords = Array.from(document.querySelectorAll('.span-text'));
-const totalSpanText = briefWords.length;
-console.log(briefWords)
-
-function handleScrollTwo() {
-    const rect = securityBrief.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-
-    const exitOffset = viewportHeight * 0.15;
-
-    const start = viewportHeight;
-    const end = exitOffset;
-
-    const progress = (start - rect.top) / (start - end);
-    const clampedProgress = Math.min(Math.max(progress, 0), 1);
-
-    const wordsToHighlight = Math.floor(clampedProgress * totalSpanText);
-
-    briefWords.forEach((word, index) => {
-        word.classList.toggle('is-active', index < wordsToHighlight);
-    });
-}
-
-
-window.addEventListener('scroll', handleScrollTwo);
