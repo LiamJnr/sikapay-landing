@@ -1,4 +1,5 @@
 import { cardColorSwap } from "./components/cardColorSwap.js";
+import { revealIcon } from "./components/featureIconReveal.js";
 import { sidebarToggler } from "./components/sidebarToggler.js";
 import { scalabilityTextReveal, securityTextReveal } from "./components/textReveal.js";
 
@@ -15,5 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Built For Section Scroll Animation
     cardColorSwap();
+
+    // Reveal icon logic
+    revealIcon();
 
 })

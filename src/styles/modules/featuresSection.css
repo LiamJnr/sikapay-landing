@@ -29,44 +29,51 @@
     padding-inline: 44px;
     border-radius: 12px;
     block-size: 320px;
-    background: white;
+    background: oklch(98.89% 0.00593 240.388);;
+    border: 1px solid gainsboro;
     position: relative;
 }
 
-.feature-card::after{
-    box-sizing: content-box;
-    position: absolute;
-    content: "";
-    block-size: 100%;
-    inline-size: 100%;
-    padding: 3px;
-    border-radius: 14px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(95, 86, 129);
-    z-index: -1;
-
-}
-
 .fcard-icon__wrapper{
-    block-size: 44px;
-    inline-size: 44px;
-    background: gainsboro;
+    --size: 44px;
+    block-size: var(--size);
+    inline-size: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: start;
     border-radius: 4px;
 }
 
-.feature-card__illustration{
-    inline-size: 100%;
-    block-size: 280px;
-    overflow: hidden;
-    /* background: greenyellow; */
+.fcard-icon{
+    --size: 36px;
+    stroke: var(--accent-color);
+    block-size: var(--size);
+    inline-size: var(--size);
+}
+
+.fcard-icon .icon-path {
+    stroke: oklch(55% 0.18 240);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    /* animation setup */
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 0.8s ease-out;
+}
+
+/* Triggered when card is in view */
+.feature-card.is-visible .icon-path {
+    stroke-dashoffset: 20;
+
 }
 
 .feature-card__description{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    /* background: red; */
+    z-index: 3;
 }
 
 .fcard__desc-title{
