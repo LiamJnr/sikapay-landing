@@ -5,8 +5,10 @@
     background: var(--accent-color);
 }
 
-.section-maxw__cntnr{
+.security-section .section-maxw__cntnr{
     gap: 72px;
+    inline-size: 100%;
+    max-inline-size: 2000px;
 }
 
 .security-section .section-header{
@@ -27,7 +29,6 @@
 .bottom-cards{
     display: flex;
     flex-direction: column;
-    gap: 72px;
 }
 
 .security-card{
@@ -38,6 +39,7 @@
     color: var(--off-white);
     position: relative;
     cursor: default;
+    background: rgb(72, 70, 102);
 }
 
 .security-briefing{
@@ -114,11 +116,16 @@
 }
 
 .security-card__desc-title{
-    font-size: 72px;
-    font-size: clamp(2.75rem, 2.25rem + 2.5vw, 4.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     font-size: clamp(2.375rem, 1.7679rem + 3.0357vw, 4.5rem);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--off-white);
+    /* background-color: red; */
+    inline-size: 520px;
+    inline-size: clamp(18.125rem, 14.0179rem + 20.5357vw, 32.5rem);
+    /* max-inline-size: 320px; */
 }
 
 .security-card__desc-title span{

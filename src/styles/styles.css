@@ -9,6 +9,7 @@
 @import './modules/targetsSection.css';
 @import './modules/scalabilitySection.css';
 @import './modules/securitySection.css';
+@import './modules/footer.css';
 
 *{
     padding: 0;

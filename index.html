@@ -191,14 +191,14 @@
                 </div>
             </div>
         </section>
-        <section id="security" class="security-section pad-in">
+        <section id="security" class="security-section">
             <div class="section-maxw__cntnr">
-                <div class="section-heading__cntnr">
+                <div class="section-heading__cntnr pad-in">
                     <h2 class="section-header">Security and compliance built into every action</h2>
                     <p class="section-sub-header">Payroll data is protected at every level — from access to audit.</p>
                 </div>
                 <div class="security-cards__cntnr">
-                    <div class="security-briefing">
+                    <div class="security-briefing pad-in">
                         <div class="briefing__cntnr">
                             <div class="briefing-wrapper">
                                 <p>Role Based Access Control assigned by default</p>
@@ -212,17 +212,26 @@
                             <canvas id="encryption-canvas" class="security-card__illustration">
                             </canvas>
                             <div class="encrypted security-card__description">
-                                <p class="security-card__desc-title"><span>YOUR DATA IS</span> SECURE</p>
-                                <p class="security-card__desc-brief">Fully encrypted employee and payroll data</p>
+                                <div class="security-card__desc-title"><span>DATA</span> <span>ENCRYPTION</span></div>
+                                <!-- <p class="security-card__desc-brief">Fully encrypted employee and payroll data.</p> -->
                             </div>
                         </div>
                         <div class="security-card footprint-canvas__cntnr">
-                            <div class="security-card__description">
-                                <p class="security-card__desc-title">DIGITAL FOOTPRINT</p>
-                                <p class="security-card__desc-brief">Full audit trails for every action performed on the system</p>
+                            <div class="encrypted security-card__description">
+                                <div class="security-card__desc-title"><span>DIGITAL</span> <span>FOOTPRINT</span></div>
+                                <!-- <p class="security-card__desc-brief">Every action performed on the system leaves a digital footprint.</p> -->
                             </div>
                             <canvas id="footprint-canvas" class="security-card__illustration">
                             </canvas>
+                        </div>
+                    </div>
+                    <div class="security-briefing pad-in">
+                        <div class="briefing__cntnr">
+                            <div class="briefing-wrapper">
+                                <p>Role Based Access Control assigned by default</p>
+                                <p>Designed to support compliance requirements as you scale</p>
+                                <p>Sensitive information stays private by design. Control access to payroll and employee data at every level.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -310,6 +319,42 @@
                 <div class="scalability-cards__cntnr">
                     <div class="scalability-card">
                         <div class="scalability-card__illustration">
+                            <div class="feature-card">
+                                <div class="card-visual">
+                                    <div class="team-list">
+                                    <div class="team-item">
+                                        <span class="avatar blue">JD</span>
+                                        <div class="skeleton-line"></div>
+                                    </div>
+                                    <div class="team-item">
+                                        <span class="avatar emerald">AS</span>
+                                        <div class="skeleton-line"></div>
+                                    </div>
+                                    <div class="team-item expand-item">
+                                        <span class="avatar purple">MK</span>
+                                        <div class="skeleton-line"></div>
+                                    </div>
+                                    </div>
+
+                                    <div class="automation-engine">
+                                    <div class="gear-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="status-badge">Automated</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h3>AUTO-FLOW</h3>
+                                    <p>Save 20+ hrs/mo" and experience a 90% boost in productivity</p>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="scalability-card__description">
                             <p class="scale-card__desc-title">Reduce administrative workload as your teams expand</p>
@@ -318,6 +363,41 @@
                     </div>
                     <div class="scalability-card">
                         <div class="scalability-card__illustration">
+                            <div class="feature-card">
+                                <div class="card-visual">
+                                    <div class="workflow-split">
+                                    <div class="department-labels">
+                                        <div class="dept-tag">Sales</div>
+                                        <div class="dept-tag">Eng</div>
+                                        <div class="dept-tag">Ops</div>
+                                    </div>
+                                    
+                                    <div class="connector-line">
+                                        <div class="pulse-dot"></div>
+                                    </div>
+
+                                    <div class="standard-list">
+                                        <div class="clean-row"></div>
+                                        <div class="clean-row"></div>
+                                        <div class="clean-row"></div>
+                                    </div>
+                                    </div>
+
+                                    <div class="status-indicator">
+                                    <div class="check-circle">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </div>
+                                    <span class="status-badge green">Unified</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h3>Standardize payroll and approvals <span>across every department</span></h3>
+                                    <p>Create consistent, structured workflows across locations and teams, reducing bottlenecks and preventing policy deviations.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="scalability-card__description">
                             <p class="scale-card__desc-title">Standardize payroll and approvals across every department</p>
@@ -326,6 +406,45 @@
                     </div>
                     <div class="scalability-card">
                         <div class="scalability-card__illustration">
+                            <div class="feature-card">
+                                <div class="card-visual">
+                                    <div class="data-stream">
+                                    <div class="data-node node-1">ERR</div>
+                                    <div class="data-node node-2">DUP</div>
+                                    <div class="data-node node-3">ERR</div>
+                                    
+                                    <div class="filter-funnel">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                                        </svg>
+                                    </div>
+
+                                    <div class="source-of-truth">
+                                        <div class="truth-glow"></div>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                                        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                                        <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path>
+                                        </svg>
+                                    </div>
+                                    </div>
+
+                                    <div class="status-indicator">
+                                    <div class="accuracy-gauge">
+                                        <div class="gauge-fill"></div>
+                                    </div>
+                                    <span class="status-badge orange">Verified</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <!-- <h3>Improve data accuracy <span>and eliminate duplicates</span></h3> -->
+                                    <!-- <p>A single source of truth for payroll and employee data helps reduce errors, remove duplicate entries, and improve reporting reliability.</p> -->
+                                </div>
+                            </div>
                         </div>
                         <div class="scalability-card__description">
                             <p class="scale-card__desc-title">Improve data accuracy and eliminate duplicate workflows</p>
@@ -334,6 +453,43 @@
                     </div>
                     <div class="scalability-card">
                         <div class="scalability-card__illustration">
+                            <div class="feature-card">
+                                <div class="card-visual">
+                                    <div class="security-grid">
+                                    <div class="access-row">
+                                        <div class="user-dot"></div>
+                                        <div class="access-bars">
+                                        <div class="bar full"></div>
+                                        <div class="bar empty"></div>
+                                        </div>
+                                    </div>
+                                    <div class="access-row">
+                                        <div class="user-dot admin"></div>
+                                        <div class="access-bars">
+                                        <div class="bar full primary"></div>
+                                        <div class="bar full primary"></div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="status-indicator">
+                                    <div class="lock-container">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="status-badge purple">Secure</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <!-- <p>Role-based permissions ensure every user has access only to what they need, keeping sensitive payroll data protected at scale.</p> -->
+                                </div>
+                            </div>
                         </div>
                         <div class="scalability-card__description">
                             <p class="scale-card__desc-title">Maintain security compliance as access levels increase</p>
@@ -347,8 +503,73 @@
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer id="footer" class="footer">
+        <div class="footer-cta__section">
+            <div class="footer-cta__wrapper">
+                <h2 class="footer-cta__heading">Ready to transform your payroll?</h2>
+                <p class="footer-cta__subheading">Start your free trial today and experience seamless, secure payroll management.</p>
+                <a href="/" class="footer-cta__btn">Get Started Now</a>
+            </div>
+        </div>
+        <div class="footer-content__wrapper">
+            <div class="footer-content__cntnr">
+                <div class="footer-section">
+                    <h3 class="footer-section__title">SikaPay</h3>
+                    <p class="footer-section__description">Transforming payroll management for organizations of all sizes.</p>
+                    <div class="footer-social__links">
+                        <a href="#" class="social-link" title="Twitter">Twitter</a>
+                        <a href="#" class="social-link" title="LinkedIn">LinkedIn</a>
+                        <a href="#" class="social-link" title="Facebook">Facebook</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section__heading">Product</h4>
+                    <ul class="footer-links__list">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section__heading">Company</h4>
+                    <ul class="footer-links__list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section__heading">Resources</h4>
+                    <ul class="footer-links__list">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Status Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section__heading">Legal</h4>
+                    <ul class="footer-links__list">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Compliance</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom__section">
+            <div class="footer-bottom__wrapper">
+                <p class="footer-copyright">&copy; 2026 SikaPay. All rights reserved.</p>
+                <div class="footer-bottom__links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script type="module" src="./src/main.js"></script>

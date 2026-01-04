@@ -57,7 +57,7 @@ export const encryptionCanvas = () => {
 
     function animate() {
         // This creates the "trail" effect by painting a semi-transparent rectangle
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; 
+        ctx.fillStyle = 'rgba(0, 8, 22, 0.05)'; 
         ctx.fillRect(0, 0, canvasWidth, canvasHeight);
         
         ctx.fillStyle = '#004585ff'; // Classic Matrix Green
@@ -77,7 +77,6 @@ export const encryptionCanvas = () => {
         effect.resize(canvasWidth, canvasHeight);
     });
 }
-
 
 
 
@@ -146,7 +145,7 @@ export const encryptionCanvas = () => {
 
 //         draw(context) {
 //             // Keep text readable but responsive
-//             const dynamicFontSize = Math.min(this.baseFontSize, Math.max(10, this.canvasWidth / 24));
+//             const dynamicFontSize = Math.min(this.baseFontSize, Math.max(10, this.canvasWidth / 22));
 //             context.font = `${dynamicFontSize}px 'Courier New', monospace`;
             
 //             const sampleText = `[00:00:00] HR_Manager executed TAX_CALC_COMPLETED (ID: FFFFFF)`;
@@ -206,6 +205,7 @@ export const encryptionCanvas = () => {
 //     });
 // }
 
+
 export const digitalFootprintCanvas = () => {
     const canvas = document.getElementById('footprint-canvas');
     const ctx = canvas.getContext('2d');
@@ -229,8 +229,8 @@ export const digitalFootprintCanvas = () => {
             this.baseFontSize = 14; 
             this.logs = [];
             this.lastTimestamp = 0;
-            this.interval = 800;
-            this.fadeZone = 100;
+            this.interval = 1000; // Slower interval for better readability
+            this.lineHeight = 25; 
         }
 
         generateLog() {
@@ -241,52 +241,26 @@ export const digitalFootprintCanvas = () => {
             
             return {
                 text: `[${timestamp}] ${user} executed ${action} (ID: ${id})`,
-                y: this.canvasHeight + 20,
+                birth: Date.now(), // Tracking time of creation for entrance effects
                 opacity: 0
             };
         }
 
         update(time) {
             if (time - this.lastTimestamp > this.interval) {
-                this.logs.push(this.generateLog());
+                // Add new log to the FRONT of the array
+                this.logs.unshift(this.generateLog());
                 this.lastTimestamp = time;
-            }
 
-            this.logs.forEach((log, index) => {
-                log.y -= 0.8;
-
-                if (log.y > this.canvasHeight - this.fadeZone) {
-                    log.opacity = (this.canvasHeight - log.y) / this.fadeZone;
-                } else if (log.y < this.fadeZone) {
-                    log.opacity = log.y / this.fadeZone;
-                } else {
-                    log.opacity = 1;
+                // Keep only enough logs to fill the screen
+                if (this.logs.length > 20) {
+                    this.logs.pop();
                 }
-
-                if (log.y < -20) {
-                    this.logs.splice(index, 1);
-                }
-            });
-        }
-
-        drawScanlines(context) {
-            context.save();
-            context.lineWidth = 1;
-            // Subtle flicker by modulating opacity slightly
-            const flicker = Math.random() * 0.05;
-            context.strokeStyle = `rgba(18, 16, 16, ${0.1 + flicker})`;
-
-            for (let i = 0; i < this.canvasHeight; i += 3) {
-                context.beginPath();
-                context.moveTo(0, i);
-                context.lineTo(this.canvasWidth, i);
-                context.stroke();
             }
-            context.restore();
         }
 
         draw(context) {
-            const dynamicFontSize = Math.min(this.baseFontSize, Math.max(10, this.canvasWidth / 24));
+            const dynamicFontSize = Math.min(this.baseFontSize, Math.max(10, this.canvasWidth / 22));
             context.font = `${dynamicFontSize}px 'Courier New', monospace`;
             
             const sampleText = `[00:00:00] HR_Manager executed TAX_CALC_COMPLETED (ID: FFFFFF)`;
@@ -296,27 +270,43 @@ export const digitalFootprintCanvas = () => {
                 ? (this.canvasWidth / 2) - (textWidth / 2) 
                 : 25; 
 
-            this.logs.forEach(log => {
-                const currentOpacity = Math.max(0, log.opacity);
+            const spacing = dynamicFontSize * 1.8;
+            const startY = 50; // Start near the top
+
+            this.logs.forEach((log, index) => {
+                // Calculate target Y based on stack position
+                const targetY = startY + (index * spacing);
+                
+                // Fade out based on how deep in the stack the log is
+                const stackFade = Math.max(0, 1 - (index / 12));
+                
+                // Entrance "pop" effect (first 300ms)
+                const age = Date.now() - log.birth;
+                const entranceFade = Math.min(1, age / 300);
+                
+                const currentOpacity = stackFade * entranceFade;
+
+                if (currentOpacity <= 0) return;
+
                 const dotSize = dynamicFontSize / 4.5;
                 const dotOffset = dynamicFontSize * 1.1;
 
+                // Horizontal vanish gradient
                 const gradient = context.createLinearGradient(centeredX, 0, this.canvasWidth - 10, 0);
                 gradient.addColorStop(0, `rgba(200, 220, 255, ${currentOpacity})`);
                 gradient.addColorStop(0.8, `rgba(200, 220, 255, ${currentOpacity})`);
                 gradient.addColorStop(1, `rgba(200, 220, 255, 0)`);
 
+                // Draw Dot
                 context.fillStyle = `rgba(0, 255, 150, ${currentOpacity})`;
                 context.beginPath();
-                context.arc(centeredX - dotOffset, log.y - (dynamicFontSize / 3), dotSize, 0, Math.PI * 2);
+                context.arc(centeredX - dotOffset, targetY - (dynamicFontSize / 3), dotSize, 0, Math.PI * 2);
                 context.fill();
 
+                // Draw Text
                 context.fillStyle = gradient;
-                context.fillText(log.text, centeredX, log.y);
+                context.fillText(log.text, centeredX, targetY);
             });
-
-            // Draw scanlines on top of the text for a better overlay effect
-            this.drawScanlines(context);
         }
 
         resize(width, height) {
@@ -341,5 +331,6 @@ export const digitalFootprintCanvas = () => {
         canvasWidth = canvas.width = containerRect.width;
         canvasHeight = canvas.height = containerRect.height;
         auditTrail.resize(canvasWidth, canvasHeight);
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     });
 }
