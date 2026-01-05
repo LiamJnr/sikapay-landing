@@ -6,83 +6,61 @@
     overflow: hidden;
 }
 
-.setup-cards__cntnr{
+.setup-steps__wrapper{
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+}
+
+.setup-step{
     inline-size: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 18px;
-    /* background: red; */
+    gap: 22px;
+    background: white;
+    padding-block: 30px;
+    padding-inline-start: clamp(1.125rem, -3.375rem + 22.5vw, 16.875rem);
 }
 
-.setup-cards__wrapper{
-    inline-size: 1122px;
-    max-inline-size: 1122px;
-    padding-inline-start: 24px;
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-     -webkit-mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,1) 85%,
-        rgba(0,0,0,0) 100%
-    );
-
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,1) 85%,
-        rgba(0,0,0,0) 100%
-    );
+.setup-step:nth-child(2){
+    padding-inline-start: clamp(1.125rem, -4.2679rem + 26.9643vw, 20rem);
 }
 
-.setup-card{
-    block-size: 100%;
-    scroll-snap-align: center;
-    /* display: flex; */
+.setup-step:nth-child(3){
+    padding-inline-start: clamp(1.125rem, -5.8393rem + 34.8214vw, 25.5rem);
 }
 
-.setup-card__visuals{
-    background: var(--text-sec2);
-    inline-size: var(--scard-size-220);
-    inline-size: 280px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 16px;
-    position: relative;
+.setup__run-payroll{
+    background: var(--text-pri);
+    color: var(--off-white);
 }
 
-.setup-card__visuals img{
-    /* background: red; */
-    opacity: 0;
-    block-size: 320px;
-    inline-size: 100%;
+.setup__run-payroll svg{
+    stroke: var(--off-white);
 }
 
-.setup-card__heading{
-    font-size: 16px;
+.setup-description{
+    font-size: 40px;
+    font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
     font-weight: 500;
-    color: var(--text-pri);
 }
 
-.setup-card__brief{
-    display: flex;
-    align-items: start;
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(clamp(-20px, -5vw, -100px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.setup-card__cta{
-    flex-shrink: 0;
-    border-radius: 50%;
-    block-size: 32px;
-    inline-size: 32px;
-    border: 1px solid gray;
-    font-size: 18px;
-    position: absolute;
-    top: 16px;
-    left: calc(100% - 48px);
+.setup-step {
+    opacity: 0;
+    transform: translateX(clamp(-20px, -5vw, -100px));
+}
+
+.setup-step.animate-in-view {
+    animation: slideInFromLeft 0.6s ease-out forwards;
 }

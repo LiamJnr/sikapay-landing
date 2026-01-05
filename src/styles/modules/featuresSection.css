@@ -16,8 +16,11 @@
 .feature-cards__cntnr{
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(var(--fcard-size-clamp380), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--fcard-size-clamp280), 1fr));
     gap: 16px;
+    /* background: oklch(12.731% 0.02217 233.568); */
+    padding: 16px;
+    border-radius: 28px;
 }
 
 .feature-card{
@@ -25,12 +28,11 @@
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    padding: var(--feature-card-pi-clamp16);
+    /* padding: var(--feature-card-pi-clamp16); */
     padding-inline: 44px;
     border-radius: 12px;
     block-size: 320px;
-    background: oklch(98.89% 0.00593 240.388);;
-    border: 1px solid gainsboro;
+    background: oklch(16.996% 0.03994 241.463);
     position: relative;
 }
 
@@ -56,7 +58,6 @@
     stroke-width: 1.5;
     stroke-linecap: round;
     stroke-linejoin: round;
-    /* animation setup */
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
     transition: stroke-dashoffset 0.8s ease-out;
@@ -72,13 +73,13 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* background: red; */
     z-index: 3;
 }
 
 .fcard__desc-title{
     font-size: 18px;
     font-weight: 500;
+    color: var(--off-white);
 }
 
 .fcard__desc-brief{

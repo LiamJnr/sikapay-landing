@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     padding-block: 148px;
+    padding-block-end: 272px;
 }
 
 .section-maxw__cntnr{
@@ -24,8 +25,8 @@
   }
   
   .scalability-bento{
-    flex: 1 1 300px;
-    min-width: 300px;
+    flex: 1 1 280px;
+    min-width: 280px;
     border: 1px solid #DEDEDE;
     border-radius: 12px;
 }

@@ -4,6 +4,7 @@
     --logos-gap-clamp32: clamp(1rem, 0.7857rem + 1.0714vw, 2rem);
     --feature-card-pi-clamp16: clamp(0.5rem, 0.3571rem + 0.7143vw, 1rem);
     --fcard-size-clamp380: clamp(18.25rem, 16.6786rem + 7.8571vw, 23.75rem);
+    --fcard-size-clamp280: clamp(17.5rem, 15.7143rem + 8.9286vw, 23.75rem);
     --scard-size-480: clamp(18.25rem, 14.8929rem + 16.7857vw, 30rem);
     --scard-size-220: clamp(13.75rem, 12.6786rem + 5.3571vw, 17.5rem);
     --bfor-card-size-540: clamp(18.25rem, 13.8214rem + 22.1429vw, 33.75rem);
