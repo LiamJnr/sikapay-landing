@@ -83,22 +83,21 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: var(--feature-card-pi-clamp16);
+    padding: 6px;
     border: 1px solid gainsboro;
-    border-radius: 1vw;
+    border-radius: 16px;
     background: var(--off-white);
-    background: #ffffff;
+    background: white;
+    /* background: #eeeeee; */
 }
 
 .scalability-card__illustration{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* inline-size: 100%; */
-    /* block-size: 280px; */
     overflow: hidden;
-    /* background: greenyellow; */
-    /* background: red; */
+    background: white;
+    border-radius: 10px;
 }
 
 .scalability-card__illustration svg{
@@ -110,6 +109,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 16px;
 }
 
 .scale-card__desc-title{
