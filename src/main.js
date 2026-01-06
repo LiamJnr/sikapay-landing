@@ -1,5 +1,4 @@
 import { cardColorSwap } from "./components/cardColorSwap.js";
-import { revealIcon } from "./components/featureIconReveal.js";
 import { sidebarToggler } from "./components/sidebarToggler.js";
 import { scalabilityTextReveal, securityTextReveal } from "./components/textReveal.js";
 import { setupStepAnimation } from "./components/setupStepAnimation.js";
@@ -20,7 +19,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Setup Steps Animation
     setupStepAnimation();
-
-    // Reveal icon logic
-    revealIcon();
 })
