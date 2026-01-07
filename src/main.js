@@ -2,6 +2,7 @@ import { cardColorSwap } from "./components/cardColorSwap.js";
 import { sidebarToggler } from "./components/sidebarToggler.js";
 import { scalabilityTextReveal, securityTextReveal } from "./components/textReveal.js";
 import { setupStepAnimation } from "./components/setupStepAnimation.js";
+import { logoCarousel } from "./components/logoCarousel.js";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -19,4 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Setup Steps Animation
     setupStepAnimation();
+
+    // carousel animation
+    logoCarousel();
 })

@@ -96,10 +96,8 @@
 }
 
 .logos-carousel{
+    /* background: red; */
     inline-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     block-size: var(--height);
     -webkit-mask-image: linear-gradient(
         to right,
@@ -116,15 +114,21 @@
         transparent
         );
     position: relative;
+    overflow: hidden;
 }
 
 .logo-cntnr{
+    inline-size: 100%;
+    /* background: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     gap: var(--logo-gap);
     flex-wrap: nowrap;
+}
+
+.logo-cntnr.carousel-animate {
+    animation: scroll var(--animation-duration, 10s) alternate infinite;
 }
 
 .social-proof__logo{
@@ -134,8 +138,18 @@
     white-space: nowrap;
     text-align: center;
     cursor: default;
+    flex-shrink: 0;
 }
 
 .social-proof__logo:hover{
     color: var(--text-pri);
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-45%);
+    }
 }
