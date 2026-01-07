@@ -1,6 +1,6 @@
 import { cardColorSwap } from "./components/cardColorSwap.js";
 import { sidebarToggler } from "./components/sidebarToggler.js";
-import { scalabilityTextReveal, securityTextReveal } from "./components/textReveal.js";
+import { scalabilityTextReveal, securityTextReveal, metricCounterAnimation } from "./components/textReveal.js";
 import { setupStepAnimation } from "./components/setupStepAnimation.js";
 import { logoCarousel } from "./components/logoCarousel.js";
 
@@ -14,6 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Scalability Section Text Reveal
     scalabilityTextReveal();
+
+    // Metric Counter Animation
+    metricCounterAnimation();
 
     // Built For Section Scroll Animation
     cardColorSwap();

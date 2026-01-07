@@ -82,3 +82,47 @@ export const scalabilityTextReveal = () => {
     
     window.addEventListener('scroll', handleScrollTwo);
 }
+
+export const metricCounterAnimation = () => {
+    const metricValues = document.querySelectorAll('.metric-value');
+    const animationDuration = 2000; // 2 seconds
+    const animatedElements = new Set();
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animatedElements.has(entry.target)) {
+                animatedElements.add(entry.target);
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    function animateCounter(element) {
+        const targetValue = parseInt(element.textContent, 10);
+        let currentValue = 0;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / animationDuration, 1);
+            
+            currentValue = Math.floor(progress * targetValue);
+            element.textContent = currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = targetValue;
+            }
+        }
+
+        requestAnimationFrame(updateCounter);
+    }
+
+    metricValues.forEach(element => {
+        observer.observe(element);
+    });
+}

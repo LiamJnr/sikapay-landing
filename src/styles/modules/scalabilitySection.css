@@ -18,21 +18,86 @@
 
 .top-section{
     display: flex;
-    align-items: center;
+    align-items: start;
     inline-size: 100%;
     gap: 6px;
     flex-wrap: wrap;
   }
   
   .scalability-bento{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
     flex: 1 1 280px;
     min-width: 280px;
     border: 1px solid #DEDEDE;
     border-radius: 12px;
+    overflow: hidden;
+    padding: 6px;
 }
 
-.scalability-bento:last-child{
+/* .scalability-bento:last-child{
   background-color: red;
+} */
+
+.scalability-growth__cntnr{
+    background: white;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.scalability-growth{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-sec3);
+}
+
+.scalability-growth span{
+    color: var(--text-pri);
+}
+
+.bento-illustration svg{
+    inline-size: 100%;
+    block-size: auto;
+}
+
+.bento-uptime__card{
+    padding: 16px;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.bento-card__head{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.bento__metric-description{
+    color: var(--text-sec3);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 931px){
+    .scalability-bento.metrics-section{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .scalability-bento.metrics-section{
+        flex-direction: column;
+    }
+}
+
+
+.bento__metric-value{
+    font-size: 82px;
 }
 
 .scalability-brief__wrapper{
